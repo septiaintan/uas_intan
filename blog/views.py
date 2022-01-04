@@ -38,16 +38,6 @@ def dashboard(request):
 def artikel(request):
     template_name = "back/tabel_artikel.html"
     artikel = Artikel.objects.filter(nama = request.user)
-    url = 'http://103.172.204.196:9012/dashboard/api/artikel/list/58c6485b9a8afadec69ac1557c76855c780996c6c66a61070a7877f003da2032'
-    #basic auth
-    user_login = "Septiaintan"
-    user_password = "septiaips1234"
-    x = requests.get(url, auth=(user_login, user_password))
-    if x.status_code ==200:
-        print('request berhasil dong')
-        data = x.json()['rows']
-        for d in data:
-            print(d['judul'])
     context = {
         'title':'tabel artikel',
         'artikel':artikel,
