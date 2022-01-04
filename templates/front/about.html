@@ -1,0 +1,28 @@
+{% extends 'front/base.html' %} {% load static %} {% block content %}
+<div class="wrapper">
+    <div class="profile-content section">
+        <div class="container">
+            <div class="row">
+                <div class="profile-picture">
+                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                        <br></br>
+                        <div class="fileinput-new img-no-padding">
+                            <img src="{% static 'front/img/faces/01.JPG' %}" alt="...">
+                        </div>
+                        <div class="name">
+                            <h4 class="title text-center">Septia Intan<br /><small>Mahasiswa</small></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto text-center">
+                    <p> nama saya Septia Intan Permata Sari yang sedang menempuh pendidikan perguruan tinggi di Universias Muhammadiyah Kal-Tim Program Studi Teknik Informatika. Website ini saya buat untuk memenuhi mata kuliah Pemograman Web Lanjut.</p>
+                    <br />
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,66 @@
+{% extends 'back/base.html' %} {% block content %}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <form class="form-horizontal" method="POST">
+                        {% csrf_token %}
+                        <div class="card-header">
+                            <h4 class="card-title">
+                                {{user_info.username}}
+                            </h4>
+                        </div>
+                        <div class="card-content">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label"> First Name</label>
+                            <div class="col-md-8">
+                                {{forms_user.first_name}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Last Name</label>
+                            <div class="col-md-8">
+                                {{forms_user.last_name}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Email</label>
+                            <div class="col-md-8">
+                                {{forms_user.email}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Alamat</label>
+                            <div class="col-md-8">
+                                {{forms_biodata.alamat}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">telp</label>
+                            <div class="col-md-8">
+                                {{forms_biodata.telp}}
+                            </div>
+                </div>
+                <div class="card-footer text-right">
+                    <div class="form-group">
+                        <label class="col-md-3"></label>
+                        <div class="col-md-9">
+                            <a class="btn btn-info" href="{% url 'tabel_users' %}">back</a>
+                            <button type="submit" class="btn btn-fill btn-warning">
+                                        Submit
+                                    </button>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <!-- end card -->
+        </div>
+        <!--  end col-md-6  -->
+    </div>
+    <!-- end row -->
+</div>
+</div>
+{% endblock content %}
